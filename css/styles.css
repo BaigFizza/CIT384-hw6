@@ -1,26 +1,276 @@
-/* Color Palette
-# - color 1
-# - color 2
-# - color 3
-# - color 4
+/*
+Color Palette
+
+#27313B - Deep Charcoal
+#3E5963 - Slate Blue
+#D8E2E1 - Soft Sage
+#F4F3EF - Warm Off White
+#FFFFFF - White
 */
 
-/* Global styles 
+
+/* Global styles
 ------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    /*background: lightblue;*/
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #27313B;
+    background-color: #F4F3EF;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 19px;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+p,
+li {
+    line-height: 1.7;
+}
+
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 
-/* Header & Footer 
+/* Navigation
 ------------------------------------*/
 
+nav {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 18px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #D8E2E1;
+}
+
+nav a {
+    color: #27313B;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 18px;
+    letter-spacing: 0.5px;
+}
+
+nav a:hover {
+    color: #3E5963;
+}
+
+
+/* Header & Footer
+------------------------------------*/
+
+header {
+    background-color: #27313B;
+    color: #FFFFFF;
+    padding: 65px 30px;
+}
+
+.header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 55px;
+}
+
+header img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #D8E2E1;
+}
+
+.intro-text {
+    max-width: 720px;
+}
+
+header h2 {
+    color: #D8E2E1;
+    margin-top: 0;
+}
+
+header p {
+    color: #F4F3EF;
+}
+
+.location {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+
+footer {
+    background-color: #27313B;
+    color: #FFFFFF;
+    padding: 50px 30px;
+    text-align: center;
+}
+
+footer h2 {
+    margin-top: 0;
+}
+
+footer p {
+    color: #D8E2E1;
+}
+
+.contact-links {
+    margin: 25px 0;
+}
+
+.contact-links a {
+    display: inline-block;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 5px 15px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #3E5963;
+}
+
+.contact-links a:hover {
+    color: #D8E2E1;
+}
+
+.copyright {
+    font-size: 13px;
+    margin-top: 30px;
+}
 
 
 /* Work Experience
 ------------------------------------*/
 
+.work-experience {
+    background-color: #F4F3EF;
+    padding: 70px 30px;
+}
+
+.work-experience h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.job {
+    display: grid;
+    grid-template-columns: 32% 68%;
+    gap: 40px;
+    padding: 30px 0;
+    border-bottom: 1px solid #D8E2E1;
+}
+
+.job:last-child {
+    border-bottom: none;
+}
+
+.company {
+    font-weight: 600;
+}
+
+.date {
+    color: #3E5963;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.job-description ul {
+    margin-top: 0;
+    padding-left: 22px;
+}
 
 
 /* Education
 ------------------------------------*/
+
+.education {
+    background-color: #D8E2E1;
+    padding: 70px 30px;
+    text-align: center;
+}
+
+.education h2 {
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.education-details {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.education-details h3 {
+    font-size: 22px;
+}
+
+
+/* Responsive Design
+------------------------------------*/
+
+@media screen and (max-width: 750px) {
+
+    nav a {
+        display: inline-block;
+        margin: 6px 10px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        width: 190px;
+        height: 190px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .job {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
